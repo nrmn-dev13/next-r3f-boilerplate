@@ -126,7 +126,7 @@ function Torus() {
 
 export default function Scene() {
   return (
-    <div className="w-full h-screen">
+    <div className="w-full h-full">
       <Canvas camera={{ position: [0, 0, 8], fov: 50 }}>
         {/* Lighting */}
         <ambientLight intensity={0.5} />
