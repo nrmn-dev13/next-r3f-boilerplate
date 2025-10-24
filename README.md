@@ -1,33 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js + React Three Fiber Boilerplate
+
+A modern boilerplate for building 3D web applications using Next.js 16, React 19, and React Three Fiber 9.
+
+## Tech Stack
+
+- **Next.js 16** - React framework with App Router
+- **React 19** - Latest React version
+- **React Three Fiber 9** - React renderer for Three.js (compatible with React 19)
+- **Three.js** - 3D graphics library
+- **@react-three/drei** - Useful helpers for React Three Fiber
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Utility-first styling
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The main 3D scene is located in `src/components/Scene.tsx`. You can customize the scene by modifying this file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
+
+```
+src/
+├── app/
+│   └── page.tsx          # Main page component
+└── components/
+    └── Scene.tsx         # 3D scene with Three.js objects
+```
+
+## Features
+
+- Interactive 3D scene with orbit controls
+- Basic geometric shapes (box, sphere, torus)
+- Lighting setup with ambient and directional lights
+- Responsive canvas that fills the viewport
+- Client-side rendering with 'use client' directive
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### Next.js Resources
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### React Three Fiber Resources
+- [React Three Fiber Documentation](https://docs.pmnd.rs/react-three-fiber) - R3F API and guides
+- [Three.js Documentation](https://threejs.org/docs/) - Three.js reference
+- [Drei Documentation](https://github.com/pmndrs/drei) - useful R3F helpers
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Important Notes
+
+- React Three Fiber version must match your React version:
+  - `@react-three/fiber@9` pairs with `react@19`
+  - `@react-three/fiber@8` pairs with `react@18`
 
 ## Deploy on Vercel
 
