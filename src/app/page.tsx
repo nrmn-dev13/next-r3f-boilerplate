@@ -2,7 +2,7 @@
 
 import dynamic from 'next/dynamic';
 
-const Particles = dynamic(() => import('@/components/Particles'), {
+const Particles = dynamic(() => import('@/components/Particles/index'), {
   ssr: false,
   loading: () => (
     <div className="w-full h-screen bg-black flex items-center justify-center">
