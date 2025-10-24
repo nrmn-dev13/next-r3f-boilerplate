@@ -1,7 +1,16 @@
-export default function Home() {
-  return (
-    <div className="w-full h-screen bg-zinc-900 flex items-center justify-center">
-      <h1 className="text-4xl font-bold text-white">This is Home</h1>
+'use client';
+
+import dynamic from 'next/dynamic';
+
+const Particles = dynamic(() => import('@/components/Particles'), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-screen bg-black flex items-center justify-center">
+      <div className="text-white text-xl">Loading...</div>
     </div>
-  );
+  ),
+});
+
+export default function Home() {
+  return <Particles />;
 }
