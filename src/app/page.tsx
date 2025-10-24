@@ -12,5 +12,12 @@ const Particles = dynamic(() => import('@/components/Particles'), {
 });
 
 export default function Home() {
-  return <Particles />;
+  return (
+    <div className="relative w-full h-screen">
+      <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl font-bold text-white z-10 pointer-events-none">
+        NRMN.XYZ
+      </h1>
+      <Particles />
+    </div>
+  );
 }
